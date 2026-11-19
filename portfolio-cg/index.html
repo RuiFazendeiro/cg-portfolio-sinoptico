@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RF — Quadro Sinóptico 3D</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <canvas id="scene-canvas"></canvas>
+
+  <header class="hud-top">
+    <div class="brand">
+      <span class="brand-mark">RF</span>
+      <div>
+        <h1>Quadro Sinóptico Modular</h1>
+        <p class="subtitle">Engenharia Informática · Eletrotecnia · Sistemas Embebidos</p>
+      </div>
+    </div>
+    <nav id="cell-nav" class="cell-nav" aria-label="Navegação entre células"></nav>
+    <button id="blueprint-btn" class="cell-btn" type="button" title="Alternar modo Blueprint (Tecla B)">[B] Blueprint</button>
+  </header>
+
+  <aside id="project-panel" class="project-panel hidden" aria-live="polite">
+    <div class="panel-header">
+      <span id="panel-code" class="panel-code">CÉLULA 01</span>
+      <button id="close-panel" class="btn-close" type="button" aria-label="Fechar painel">ESC / Fechar</button>
+    </div>
+    <h2 id="panel-title">Título</h2>
+    <p id="panel-meta" class="panel-meta"></p>
+    <p id="panel-summary" class="panel-summary"></p>
+    <div class="panel-section">
+      <h3>Papel e Contribuição</h3>
+      <p id="panel-role"></p>
+    </div>
+    <div class="panel-section">
+      <h3>Stack / Ferramentas</h3>
+      <ul id="panel-stack" class="stack-list"></ul>
+    </div>
+    <div class="panel-actions">
+      <a id="panel-link" class="btn-link" href="#" target="_blank" rel="noopener noreferrer">Ver detalhes / repositório</a>
+      <button id="toggle-breaker-btn" class="btn-secondary" type="button">Alternar Disjuntor</button>
+    </div>
+  </aside>
+
+  <footer class="hud-bottom">
+    <span>Scroll ou A/D / Setas para percorrer</span>
+    <span>·</span>
+    <span>Clique no disjuntor para energizar/inspecionar</span>
+    <span>·</span>
+    <span id="active-status">Estado: Barramento em espera</span>
+  </footer>
+
+<script src="js/three.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/shaders.js"></script>
+<script src="js/scene.js"></script>
+</body>
+</html>
