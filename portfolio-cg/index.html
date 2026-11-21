@@ -17,8 +17,17 @@
         <p class="subtitle">Engenharia Informática · Eletrotecnia · Sistemas Embebidos</p>
       </div>
     </div>
-    <nav id="cell-nav" class="cell-nav" aria-label="Navegação entre células"></nav>
-    <button id="blueprint-btn" class="cell-btn" type="button" title="Alternar modo Blueprint (Tecla B)">[B] Blueprint</button>
+
+    <div class="hud-controls">
+      <nav id="cell-nav" class="cell-nav" aria-label="Navegação entre células"></nav>
+      <button id="audio-btn" class="cell-btn" type="button" title="Ativar motor de áudio procedural">Áudio: OFF</button>
+      <button id="blueprint-btn" class="cell-btn" type="button" title="Alternar modo Blueprint (Tecla B)">[B] Blueprint</button>
+      <select id="quality-select" class="cell-select" aria-label="Qualidade gráfica">
+        <option value="medium" selected>Qualidade: Média</option>
+        <option value="low">Qualidade: Baixa</option>
+        <option value="high">Qualidade: Alta</option>
+      </select>
+    </div>
   </header>
 
   <aside id="project-panel" class="project-panel hidden" aria-live="polite">
@@ -49,11 +58,14 @@
     <span>Clique no disjuntor para energizar/inspecionar</span>
     <span>·</span>
     <span id="active-status">Estado: Barramento em espera</span>
+    <span>·</span>
+    <span id="telemetry-readout">-- FPS · -- ms · -- draws</span>
   </footer>
 
-<script src="js/three.min.js"></script>
-<script src="js/data.js"></script>
-<script src="js/shaders.js"></script>
-<script src="js/scene.js"></script>
+  <script src="js/three.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/shaders.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/scene.js"></script>
 </body>
 </html>

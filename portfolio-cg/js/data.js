@@ -54,9 +54,10 @@ window.PORTFOLIO_CELLS = [
     period: "Contínuo",
     role: "Composição, arranjo, programação de pianos elétricos e processamento de áudio.",
     summary:
-      "Produções originais em ambiente DAW com foco em harmonia, timbres de piano elétrico e futura ligação a análise espectral em tempo real.",
+      "Produções originais em ambiente DAW com foco em harmonia, timbres de piano elétrico e análise FFT em tempo real via Web Audio API.",
     stack: ["Ableton Live", "Rhodes / Wurlitzer", "Web Audio API"],
     url: "https://ruifazendeiro.github.io",
-    accentColor: 0xf472b6
+    accentColor: 0xf472b6,
+    isAudioCell: true
   }
 ];
